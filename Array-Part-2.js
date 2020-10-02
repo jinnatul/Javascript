@@ -70,3 +70,15 @@ Array.isArray(true);
 Array.isArray(false);
 Array.isArray(new Uint8Array(32));
 Array.isArray({ __proto__: Array.prototype });
+
+
+
+/***  Array.of()  ***/
+
+Array.of(7);       // [7] 
+Array.of(1, 2, 3); // [1, 2, 3]
+Array.of(undefined); // [undefined]
+
+Array(7);          // array of 7 empty slots
+Array(1, 2, 3);    // [1, 2, 3]
+
