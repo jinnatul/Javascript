@@ -120,3 +120,14 @@ console.log(numbers); // [[1], 2, [3]]
 num1[0].push(4);
 console.log(numbers); // [[1, 4], 2, [3]]
 
+
+
+/***  Array.prototype.copyWithin()  ***/
+
+[1, 2, 3, 4, 5].copyWithin(-2) // [1, 2, 3, 1, 2]
+[1, 2, 3, 4, 5].copyWithin(0, 3) // [4, 5, 3, 4, 5]
+[1, 2, 3, 4, 5].copyWithin(0, 3, 4) // [4, 2, 3, 4, 5]
+[1, 2, 3, 4, 5].copyWithin(-2, -3, -1) // [1, 2, 3, 3, 4]
+[1, 2, 3, 4, 5].copyWithin(2, 4) // [1, 2, 5, 4, 5]
+[1, 2, 3, 4, 5].copyWithin(2, 3) // [1, 2, 4, 5, 5]
+[1, 2, 3, 4, 5].copyWithin(2, 4) // [1, 2, 5, 4, 5]
