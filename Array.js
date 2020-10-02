@@ -78,3 +78,47 @@ console.log(removedItems) // ["Turnip", "Radish"]
 let shallowCopy = fruits.slice() // ["Strawberry", "Mango"]
 
 
+
+/***  Accessing array elements  ***/
+
+let arr = ['this is the first element', 'this is the second element', 'this is the last element']
+console.log(arr[0])              // logs 'this is the first element'
+console.log(arr[1])              // logs 'this is the second element'
+console.log(arr[arr.length - 1]) // logs 'this is the last element'
+
+let years = [1950, 1960, 1970, 1980, 1990, 2000, 2010]
+console.log(years.0)   // a syntax error
+console.log(years[0])  // works properly
+
+console.log(years['2']) // 1970
+console.log(years['02']) // undefined
+console.log(years['2'] != years['02']) // true
+
+
+
+/***  Relationship between length and numerical properties  ***/
+
+const fruits = []
+fruits.push('banana', 'apple', 'peach')
+console.log(fruits.length) // 3
+
+fruits[5] = 'mango'
+console.log(fruits[5])            // 'mango'
+console.log(Object.keys(fruits))  // ['0', '1', '2', '5']
+console.log(fruits.length)        // 6
+
+
+// Increasing the length.
+
+fruits.length = 10
+console.log(fruits)              // ['banana', 'apple', 'peach', empty x 2, 'mango', empty x 4]
+console.log(Object.keys(fruits)) // ['0', '1', '2', '5']
+console.log(fruits.length)       // 10
+console.log(fruits[8])           // undefined
+
+
+// Decreasing the length property does, however, delete elements.
+
+fruits.length = 2
+console.log(Object.keys(fruits)) // ['0', '1']
+console.log(fruits.length)       // 2
