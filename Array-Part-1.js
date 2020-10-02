@@ -122,3 +122,9 @@ console.log(fruits[8])           // undefined
 fruits.length = 2
 console.log(Object.keys(fruits)) // ['0', '1']
 console.log(fruits.length)       // 2
+
+
+/***  Creating an array using the result of a match  ***/
+
+const myRe = /d(b+)(d)/i
+const myArray = myRe.exec('cdbBdbsbz'); // ["dbBd", "bB", "d"]
