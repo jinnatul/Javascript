@@ -82,3 +82,41 @@ Array.of(undefined); // [undefined]
 Array(7);          // array of 7 empty slots
 Array(1, 2, 3);    // [1, 2, 3]
 
+
+
+/***  Array.prototype.concat()  ***/
+
+// Concatenating two arrays
+
+const letters = ['a', 'b', 'c'];
+const numbers = [1, 2, 3];
+letters.concat(numbers); // ['a', 'b', 'c', 1, 2, 3]
+
+
+// Concatenating three arrays
+
+const num1 = [1, 2, 3];
+const num2 = [4, 5, 6];
+const num3 = [7, 8, 9];
+const numbers = num1.concat(num2, num3);
+console.log(numbers); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+// Concatenating values to an array
+
+const letters = ['a', 'b', 'c'];
+const alphaNumeric = letters.concat(1, [2, 3]);
+console.log(alphaNumeric); // ['a', 'b', 'c', 1, 2, 3]
+
+
+// Concatenating nested arrays
+
+const num1 = [[1]];
+const num2 = [2, [3]];
+const numbers = num1.concat(num2);
+console.log(numbers); // [[1], 2, [3]]
+
+// modify the first element of num1
+num1[0].push(4);
+console.log(numbers); // [[1, 4], 2, [3]]
+
