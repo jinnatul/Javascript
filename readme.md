@@ -56,5 +56,5 @@
     * Array.prototype.toString()
     * Array.prototype.unshift()
     * Array.prototype.values()
-    * Array.prototype[@@iterator]()
+    
 </details>
