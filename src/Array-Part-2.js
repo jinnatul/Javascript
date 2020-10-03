@@ -162,3 +162,65 @@ for (let e of iterator) {
   [1, 'b']
   [2, 'c'] 
 */
+
+
+
+/***  Array.prototype.every()  ***/
+
+// Testing size of all array elements
+
+const isBigEnough = (element) => {
+  return element >= 10;
+}
+[12, 5, 8, 130, 44].every(isBigEnough);   // false
+[12, 54, 18, 130, 44].every(isBigEnough); // true
+
+
+// Using arrow functions
+
+[12, 5, 8, 130, 44].every(x => x >= 10);   // false
+[12, 54, 18, 130, 44].every(x => x >= 10); // true
+
+
+// Modifying items
+
+let arr = [1, 2, 3, 4];
+arr.every( (elem, index, arr) => {
+  arr[index+1] -= 1
+  console.log(`[${arr}][${index}] -> ${elem}`)
+  return elem < 2 
+})
+/*
+  1st iteration: [1,1,3,4][0] -> 1
+  2nd iteration: [1,1,2,4][1] -> 1
+  3rd iteration: [1,1,2,3][2] -> 2
+*/
+
+
+// Appending items
+
+let arr = [1, 2, 3];
+arr.every( (elem, index, arr) => {
+  arr.push('new')
+  console.log(`[${arr}][${index}] -> ${elem}`)
+  return elem < 4
+})
+/*
+  1st iteration: [1, 2, 3, new][0] -> 1
+  2nd iteration: [1, 2, 3, new, new][1] -> 2
+  3rd iteration: [1, 2, 3, new, new, new][2] -> 3
+*/
+
+
+// Deleting items
+
+let arr = [1, 2, 3, 4];
+arr.every( (elem, index, arr) => {
+  arr.pop()
+  console.log(`[${arr}][${index}] -> ${elem}`)
+  return elem < 4
+});
+/*
+  1st iteration: [1,2,3][0] -> 1
+  2nd iteration: [1,2][1] -> 2
+*/
