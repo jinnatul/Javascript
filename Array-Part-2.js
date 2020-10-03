@@ -131,3 +131,34 @@ console.log(numbers); // [[1, 4], 2, [3]]
 [1, 2, 3, 4, 5].copyWithin(2, 4) // [1, 2, 5, 4, 5]
 [1, 2, 3, 4, 5].copyWithin(2, 3) // [1, 2, 4, 5, 5]
 [1, 2, 3, 4, 5].copyWithin(2, 4) // [1, 2, 5, 4, 5]
+
+
+
+/***  Array.prototype.entries()  ***/
+
+// Iterating with index and element
+
+const a = ['a', 'b', 'c'];
+
+for (const [index, element] of a.entries())
+  console.log(index, element);
+/*
+  0 'a' 
+  1 'b' 
+  2 'c'
+*/
+
+
+// Using a for…of loop
+
+const a = ['a', 'b', 'c'];
+const iterator = a.entries();
+
+for (let e of iterator) {
+  console.log(e);
+}
+/*
+  [0, 'a']
+  [1, 'b']
+  [2, 'c'] 
+*/
