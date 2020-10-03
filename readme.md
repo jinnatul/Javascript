@@ -2,7 +2,8 @@
   <img width="650" src="https://www.tutorialrepublic.com/lib/images/javascript-illustration.png">
 </p>
 
-### Array
+* <details>
+  <summary>Chapter 1: Arrays</summary>
 
   * [Part - 1](/src/Array-Part-1.js)
     * Common operations.
@@ -56,3 +57,4 @@
     * Array.prototype.unshift()
     * Array.prototype.values()
     * Array.prototype[@@iterator]()
+</details>
